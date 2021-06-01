@@ -1,0 +1,53 @@
+mvn
+<html>
+<head>
+    <title>British Airways Homepage</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a href="homepage.html">
+        <img class="nav-logo navbar-brand" src="src\main\webapp\WEB-INF\images\BA_logo.jpg" alt="Image of Logo" height="100" width="150">
+    </a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/login">Sign In</a>
+        <a class="nav-item nav-link active" href="/">Register</a>
+        <a class="nav-item nav-link active" href="/">Flights</a>
+    </div>
+</nav>
+
+<div class="row" style="margin-top: 150px">
+
+    <form style="margin-top: 150px" method="POST" action="/">
+        <div class="form-group col-md-4">
+            <label class="font-weight-bold" style="margin-left: 40%">Search all flights</label>
+            <div class="input-group col-md-4">
+            <input type="text" class="form-control" style="margin-left: 40px" name="origin" placeholder="Origin">
+            </div>
+
+            <div class="input-group col-md-4">
+            <input type="text" class="form-control" style="margin-left: 40px; margin-top: 10px" name="dest" placeholder="Destination">
+            </div>
+
+            <div class="input-group col-md-4">
+            <input type="date" class="form-control" style="margin-left: 40px; margin-top: 15px" name="date" placeholder="Date of departure">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark col-md-3" style="margin-left: 60px; margin-top: 20px">Search</button>
+    </form></div>
+
+<!--    <h1>What would you like to do?</h1>-->
+<!--    <h2>-->
+<!--        <a href="/new">Sign In</a>&nbsp;&nbsp;&nbsp;-->
+<!--        <a href="/">Register</a>-->
+<!--        <a href="">Search flights</a>-->
+<!--        <a href="">See your booked flights</a>-->
+
+<!--    </h2>-->
+
+</body>
+</html>

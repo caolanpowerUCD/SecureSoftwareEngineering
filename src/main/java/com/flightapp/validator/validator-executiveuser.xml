@@ -1,0 +1,33 @@
+<form-validation>
+   <global>
+      <validator name="long"
+                 classname="org.apache.commons.validator.GenericTypeValidatorImpl"
+                 method="validateLong"
+                 methodParams="java.lang.Object,org.apache.commons.validator.Field"
+                 msg=""/>
+      <validator name="email"
+                 classname="org.apache.commons.validator.GenericValidatorImpl"
+                 method="validateEmail"
+                 methodParams="java.lang.Object,org.apache.commons.validator.Field"
+                 msg=""/>
+      <validator name="required"
+                 classname="org.apache.commons.validator.TestValidator"
+                 method="validateRequired"
+                 methodParams="java.lang.Object,org.apache.commons.validator.Field"
+                 msg=""/>
+   </global>
+   <formset>
+      <form name="executiveUsers">
+         <field property="username"  depends="required"/>    
+         <field property="password" depends="required"/>
+         <field property="first_name" depends="required"/>
+         <field property="last_name" depends="required"/>
+         <field property="email" depends="required, email"/>
+         <field property="phone_number" depends="required"/>
+         <field property="card_number" depends="required"/>
+         <field property="card_expiry_month" depends="required"/>
+         <field property="card_expiry_year" depends="required"/>
+         <field property="card_cvv" depends="required"/>
+      </form>
+   </formset>   
+</form-validation>
